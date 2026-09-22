@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- This line makes the page fit phone screens properly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+
+  <!-- Poppins font from Google Fonts (optional - the page still works without it) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- ========== LEFT SIDE: current weather ========== -->
+    <aside class="sidebar">
+<video
+class="vedio-back"
+  src="weathervedios/149928-797491628.mp4"
+  autoplay
+  muted
+  loop
+  playsinline>
+</video>
+      <!-- Search box -->
+       <div class="search-box-content">
+
+      <div class="search-box">
+        <input type="text" value="London" aria-label="City name">
+        <select aria-label="Temperature unit">
+          <option>°C</option>
+          <option>°F</option>
+        </select>
+        <button aria-label="Search"><img src="icons/icons8-search-100.png" alt=""></button>
+      </div>
+
+    
+   
+
+      <!-- Temperature and details -->
+      <div class="current-info">
+        <p class="temperature">15<span>°C</span></p>
+        <p class="small-text">Feels like 14 °C</p>
+        <p class="small-text description">overcast clouds</p>
+        <p class="small-text">Saturday, April 6 at 6:15 AM</p>
+        <p class="small-text">London, GB</p>
+      </div>
+</div>
+    </aside>
+
+    <!-- ========== RIGHT SIDE: highlights and weekly forecast ========== -->
+    <main class="content">
+
+      <h2>Today's Highlights</h2>
+
+      <div class="highlights">
+
+        <div class="card">
+          <img src="images/pexels-glass-1868045.jpg" alt="humidity" class="back-photo">
+          <div class="card-content">
+          <h3>Humidity</h3>
+          <p class="value">78<span>%</span></p>
+          </div>
+        </div>
+
+           <div class="card">
+          <img src="images/elg21-wind-mills-6928590.jpg" alt="humidity" class="back-photo">
+          <div class="card-content">
+          <h3>wind-speed</h3>
+          <p class="value">80<span>km/hr</span></p>
+          </div>
+        </div>
+
+          <div class="card">
+          <img src="images/elg21-lake-7377942.jpg" alt="humidity" class="back-photo">
+          <div class="card-content">
+         <div class="sun-row">
+            <p>6:23 AM<br>Sunrise</p>
+          </div>
+          <div class="sun-row">
+            <p>7:41 PM<br>Sunset</p>
+          </div>
+        </div>
+         </div>
+        
+  <div class="card">
+          <img src="images/wolfblur-clouds-1439324.jpg" alt="humidity" class="back-photo">
+          <div class="card-content">
+          <h3>clouds</h3>
+          <p class="value">80<span>km/hr</span></p>
+          </div>
+        </div>
+    
+  <div class="card">
+          <img src="images/mabelamber-sunglasses-1579389.jpg" alt="humidity" class="back-photo">
+          <div class="card-content">
+          <h3>visibility</h3>
+          <p class="value">80</p>
+          </div>
+        </div>
+        
+  <div class="card">
+          <img src="images/laukritz-pressure-gauge-6715671.jpg" alt="humidity" class="back-photo">
+          <div class="card-content">
+          <h3>pressure</h3>
+          <p class="value">80<span>hpa</span></p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <h2>This Week</h2>
+
+      <div class="week">
+
+        <div class="card day">
+          <h3>Saturday, April 6</h3>
+          <div class="icon">☁️</div>
+          <p class="day-desc">overcast clouds</p>
+          <p class="day-temp">18 °C &nbsp; 12 °C</p>
+        </div>
+
+        <div class="card day">
+          <h3>Sunday, April 7</h3>
+          <div class="icon">🌦️</div>
+          <p class="day-desc">light rain</p>
+          <p class="day-temp">16 °C &nbsp; 10 °C</p>
+        </div>
+
+        <div class="card day">
+          <h3>Monday, April 8</h3>
+          <div class="icon">🌦️</div>
+          <p class="day-desc">light rain</p>
+          <p class="day-temp">16 °C &nbsp; 10 °C</p>
+        </div>
+
+        <div class="card day">
+          <h3>Tuesday, April 9</h3>
+          <div class="icon">🌦️</div>
+          <p class="day-desc">light rain</p>
+          <p class="day-temp">11 °C &nbsp; 6 °C</p>
+        </div>
+
+        <div class="card day">
+          <h3>Wednesday, April 10</h3>
+          <div class="icon">🌦️</div>
+          <p class="day-desc">light rain</p>
+          <p class="day-temp">12 °C &nbsp; 7 °C</p>
+        </div>
+
+        <div class="card day">
+          <h3>Thursday, April 11</h3>
+          <div class="icon">☁️</div>
+          <p class="day-desc">broken clouds</p>
+          <p class="day-temp">13 °C &nbsp; 7 °C</p>
+        </div>
+
+        <div class="card day">
+          <h3>Friday, April 12</h3>
+          <div class="icon">☀️</div>
+          <p class="day-desc">clear sky</p>
+          <p class="day-temp">15 °C &nbsp; 8 °C</p>
+        </div>
+
+        <div class="card day">
+          <h3>Saturday, April 13</h3>
+          <div class="icon">⛅</div>
+          <p class="day-desc">few clouds</p>
+          <p class="day-temp">14 °C &nbsp; 8 °C</p>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="scripting.js"></script>
+</body>
+</html>

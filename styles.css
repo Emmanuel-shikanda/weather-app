@@ -1,0 +1,292 @@
+/* ---------- 1. Colors in one place ----------
+   Change these two lines to re-theme the whole page. */
+:root {
+  --main-color: #000000;      /* black (was blue in the screenshot) */
+  --text-on-main: #ffffff;    /* white text on black */
+  --page-bg: #f4f4f6;         /* light grey page background */
+}
+
+/* ---------- 2. Basic reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* padding won't make boxes wider than you set */
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #222;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ---------- 3. The main layout: sidebar + content ---------- */
+.app {
+  display: flex;              /* puts sidebar and content side by side */
+  width: 100%;
+  max-width: 1200px;
+  background: var(--page-bg);
+  border-radius: 30px;
+  overflow: hidden;           /* keeps the rounded corners clean */
+}
+
+/* ---------- 4. Sidebar (left) ---------- */
+.sidebar {
+  width: 350px;
+  background: var(--main-color);
+  color: var(--text-on-main);
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* search on top, info at the bottom */
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.sidebar video{
+width:100%;
+height:100%;
+object-fit: cover;
+position: absolute;
+top:0;
+left:0;
+z-index:0;
+}
+
+.search-box-content {
+  position: relative;
+  z-index: 1;
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: white;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.search-box input {
+  flex: 1;              /* input takes all the free space */
+  min-width: 0;         /* lets it shrink on small screens */
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.search-box select {
+  border: none;
+  background: #eee;
+  font-family: inherit;
+  margin: 0 8px;
+}
+
+.search-box button {
+  border: none;
+  background: none;
+  width:25px;
+  cursor: pointer;
+}
+
+.search-box button img{
+  width:100%;
+}
+
+.current-icon {
+  font-size: 110px;
+}
+
+.current-info {
+  width: 100%;
+}
+
+.temperature {
+  font-size:7rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.temperature span {
+  font-size: 28px;
+  vertical-align: top;
+}
+
+.small-text {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.description {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #555; /* the thin line under "overcast clouds" */
+}
+
+/* ---------- 5. Content (right) ---------- */
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+.content h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+
+
+/* ---------- 6. Cards (used for highlights AND days) ---------- */
+.card {
+  background: var(--main-color);
+  color: var(--text-on-main);
+  border-radius: 10px;
+  padding: 0px;
+  text-align: center;
+  position: relative;
+}
+.card .back-photo{
+ width:100%;
+ height: 100%;
+ border-radius:10px;
+}
+
+.card-content{
+  position: absolute;
+  z-index:1;
+  top:0;
+  left:0;
+  background-color: #00000065;
+  width:100%;
+  height:100%;
+  border-radius:10px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+}
+
+
+
+
+.card h3 {
+  font-size: 20px;
+  font-weight: 40;
+}
+
+
+.value {
+  font-size: 3.2rem;
+  font-weight: 600;
+  padding:5px;
+  border-radius:10px;
+}
+
+.value span {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: white;
+  margin-left: 2px;
+}
+
+/* ---------- 7. Highlights grid: 3 columns ---------- */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+/* Sunrise / sunset card */
+.sun-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-align: left;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+/* ---------- 8. Week grid: 4 columns ---------- */
+.week {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.day .icon {
+  font-size: 45px;
+  margin: 10px 0;
+}
+
+.day-desc {
+  font-size: 12px;
+  font-style: italic;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.day-temp {
+  font-size: 14px;
+}
+
+/* ---------- 9. Responsive: tablets ---------- */
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;   /* stack sidebar on top of content */
+  }
+
+  .sidebar {
+    width: 100%;
+    height:80vh;
+  }
+
+  .week {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 4 */
+  }
+}
+
+/* ---------- 10. Responsive: phones ---------- */
+@media (max-width: 550px) {
+  body {
+    padding: 0;
+  }
+
+  .app {
+    border-radius: 0;
+  }
+
+  .content {
+    padding: 20px 15px;
+  }
+
+  .highlights {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 3 */
+  }
+
+  .temperature {
+    font-size: 56px;
+  }
+}
+
+/* Very small phones: everything in one column */
+@media (max-width: 380px) {
+  .highlights,
+  .week {
+    grid-template-columns: 1fr;
+  }
+}
