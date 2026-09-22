@@ -30,12 +30,12 @@ class="vedio-back"
        <div class="search-box-content">
 
       <div class="search-box">
-        <input type="text" value="London" aria-label="City name">
+        <input type="text"  id="City">
         <select aria-label="Temperature unit">
           <option>°C</option>
           <option>°F</option>
         </select>
-        <button aria-label="Search"><img src="icons/icons8-search-100.png" alt=""></button>
+        <button id="Search"><img src="icons/icons8-search-100.png" alt=""></button>
       </div>
 
     
@@ -43,11 +43,11 @@ class="vedio-back"
 
       <!-- Temperature and details -->
       <div class="current-info">
-        <p class="temperature">15<span>°C</span></p>
-        <p class="small-text">Feels like 14 °C</p>
-        <p class="small-text description">overcast clouds</p>
-        <p class="small-text">Saturday, April 6 at 6:15 AM</p>
-        <p class="small-text">London, GB</p>
+        <p class="temperature"></p>
+        <p class="1small-text"></p>
+        <p class="small-text description"></p>
+        <p class="2small-text"></p>
+        <p class="3small-text"></p>
       </div>
 </div>
     </aside>
@@ -55,7 +55,7 @@ class="vedio-back"
     <!-- ========== RIGHT SIDE: highlights and weekly forecast ========== -->
     <main class="content">
 
-      <h2>Today's Highlights</h2>
+      <h2> Today's Highlights</h2>
 
       <div class="highlights">
 
@@ -63,7 +63,7 @@ class="vedio-back"
           <img src="images/pexels-glass-1868045.jpg" alt="humidity" class="back-photo">
           <div class="card-content">
           <h3>Humidity</h3>
-          <p class="value">78<span>%</span></p>
+          <p class="value humidity"></p>
           </div>
         </div>
 
@@ -71,7 +71,7 @@ class="vedio-back"
           <img src="images/elg21-wind-mills-6928590.jpg" alt="humidity" class="back-photo">
           <div class="card-content">
           <h3>wind-speed</h3>
-          <p class="value">80<span>km/hr</span></p>
+          <p class="value wind"></p>
           </div>
         </div>
 
@@ -79,10 +79,10 @@ class="vedio-back"
           <img src="images/elg21-lake-7377942.jpg" alt="humidity" class="back-photo">
           <div class="card-content">
          <div class="sun-row">
-            <p>6:23 AM<br>Sunrise</p>
+            <p><br>Sunrise</p>
           </div>
           <div class="sun-row">
-            <p>7:41 PM<br>Sunset</p>
+            <p><br>Sunset</p>
           </div>
         </div>
          </div>
@@ -91,7 +91,7 @@ class="vedio-back"
           <img src="images/wolfblur-clouds-1439324.jpg" alt="humidity" class="back-photo">
           <div class="card-content">
           <h3>clouds</h3>
-          <p class="value">80<span>km/hr</span></p>
+          <p class="value clouds"></p>
           </div>
         </div>
     
@@ -99,7 +99,7 @@ class="vedio-back"
           <img src="images/mabelamber-sunglasses-1579389.jpg" alt="humidity" class="back-photo">
           <div class="card-content">
           <h3>visibility</h3>
-          <p class="value">80</p>
+          <p class="value visibility"></p>
           </div>
         </div>
         
@@ -107,7 +107,7 @@ class="vedio-back"
           <img src="images/laukritz-pressure-gauge-6715671.jpg" alt="humidity" class="back-photo">
           <div class="card-content">
           <h3>pressure</h3>
-          <p class="value">80<span>hpa</span></p>
+          <p class="value pressure"></p>
           </div>
         </div>
 

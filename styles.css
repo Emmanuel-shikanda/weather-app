@@ -109,19 +109,19 @@ z-index:0;
 
 .current-info {
   width: 100%;
+  background-color: #0000004a;
+  padding:10px;
+  border-radius:6px;
 }
 
 .temperature {
-  font-size:7rem;
+  font-size:5rem;
   font-weight: 500;
   line-height: 1;
   margin-bottom: 15px;
 }
 
-.temperature span {
-  font-size: 28px;
-  vertical-align: top;
-}
+
 
 .small-text {
   font-size: 14px;
@@ -189,7 +189,7 @@ z-index:0;
 
 
 .value {
-  font-size: 3.2rem;
+  font-size: 1.7rem;
   font-weight: 600;
   padding:5px;
   border-radius:10px;
@@ -206,7 +206,7 @@ z-index:0;
 .highlights {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  gap: 15px;
+  gap: 10px;
   margin-bottom: 35px;
 }
 
@@ -275,7 +275,7 @@ z-index:0;
   }
 
   .highlights {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 3 */
+    grid-template-columns: repeat(1, 1fr); /* 2 columns instead of 3 */
   }
 
   .temperature {
