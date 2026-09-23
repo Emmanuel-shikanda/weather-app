@@ -20,11 +20,13 @@
     <aside class="sidebar">
 <video
 class="vedio-back"
-  src="weathervedios/149928-797491628.mp4"
+  src="weathervedios/12460328-Hd 1080 1920 60Fps(1).mp4"
   autoplay
   muted
   loop
-  playsinline>
+  playsinline
+  preload="metadata"
+  >
 </video>
       <!-- Search box -->
        <div class="search-box-content">
@@ -55,7 +57,7 @@ class="vedio-back"
     <!-- ========== RIGHT SIDE: highlights and weekly forecast ========== -->
     <main class="content">
 
-      <h2> Today's Highlights</h2>
+      <h2 id="today"></h2>
 
       <div class="highlights">
 
@@ -114,60 +116,54 @@ class="vedio-back"
       </div>
 
 
-      <h2>This Week</h2>
+      <h2 id="this-week"></h2>
 
       <div class="week">
 
-        <div class="card day">
-          <h3>Saturday, April 6</h3>
-          <div class="icon">☁️</div>
-          <p class="day-desc">overcast clouds</p>
-          <p class="day-temp">18 °C &nbsp; 12 °C</p>
-        </div>
 
-        <div class="card day">
+        <div class="card-day">
           <h3>Sunday, April 7</h3>
           <div class="icon">🌦️</div>
           <p class="day-desc">light rain</p>
           <p class="day-temp">16 °C &nbsp; 10 °C</p>
         </div>
 
-        <div class="card day">
+        <div class="card-day">
           <h3>Monday, April 8</h3>
           <div class="icon">🌦️</div>
           <p class="day-desc">light rain</p>
           <p class="day-temp">16 °C &nbsp; 10 °C</p>
         </div>
 
-        <div class="card day">
+        <div class="card-day">
           <h3>Tuesday, April 9</h3>
           <div class="icon">🌦️</div>
           <p class="day-desc">light rain</p>
           <p class="day-temp">11 °C &nbsp; 6 °C</p>
         </div>
 
-        <div class="card day">
+        <div class="card-day">
           <h3>Wednesday, April 10</h3>
           <div class="icon">🌦️</div>
           <p class="day-desc">light rain</p>
           <p class="day-temp">12 °C &nbsp; 7 °C</p>
         </div>
 
-        <div class="card day">
+        <div class="card-day">
           <h3>Thursday, April 11</h3>
           <div class="icon">☁️</div>
           <p class="day-desc">broken clouds</p>
           <p class="day-temp">13 °C &nbsp; 7 °C</p>
         </div>
 
-        <div class="card day">
+        <div class="card-day">
           <h3>Friday, April 12</h3>
           <div class="icon">☀️</div>
           <p class="day-desc">clear sky</p>
           <p class="day-temp">15 °C &nbsp; 8 °C</p>
         </div>
 
-        <div class="card day">
+        <div class="card-day">
           <h3>Saturday, April 13</h3>
           <div class="icon">⛅</div>
           <p class="day-desc">few clouds</p>

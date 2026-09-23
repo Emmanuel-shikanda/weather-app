@@ -15,6 +15,7 @@ let cityname = document.getElementById('City').value;
 
      
     async function geodata(){
+
     let geourl =await'https://geocoding-api.open-meteo.com/v1/search?name='+cityname+'&count=10&language=en&format=json&utm_source=chatgpt.com';
     
     let request =await fetch(geourl);
@@ -36,11 +37,18 @@ let cityname = document.getElementById('City').value;
            //get city  name.
     let city = document.getElementsByClassName('3small-text')[0];
     city.textContent=data.results[0].name;
+
+    let today = document.getElementById('today');
+    today.textContent = data.results[0].name + '  Today highlights';
      
+  let thisweek = document.getElementById('this-week');
+ thisweek.textContent = data.results[0].name + '  This week  weather prediction ';
+
+
 
     async function weatherurl(){
 
-     let weather = await 'https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+long+'&hourly=temperature_2m&utm_source=chatgpt.com'+ '&hourly=temperature_2m,weather_code,relative_humidity_2m,wind_speed_10m,cloud_cover,visibility,pressure_msl&timezone=auto&daily=sunrise,sunset';
+     let weather = await 'https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+long+'&hourly=temperature_2m&utm_source=chatgpt.com'+ '&hourly=temperature_2m,weather_code,relative_humidity_2m,wind_speed_10m,cloud_cover,visibility,pressure_msl&timezone=auto&daily=sunrise,sunset&forecast_days=7';
 
      let asking = await fetch(weather);
 
@@ -101,22 +109,22 @@ let weatherVideo = document.getElementsByClassName('vedio-back')[0];
 
 
 if(code === 0){
-    weatherVideo.src = 'weathervedios/19318533-hd_1080_1920_30fps.mp4';
+    weatherVideo.src = 'weathervedios/12908063 1080 1920 30Fps.mp4';
 }
 else if(code >= 1 && code <= 3){
-    weatherVideo.src = 'weathervedios/12460328-hd_1080_1920_60fps.mp4';
+    weatherVideo.src = 'weathervedios/12460328-Hd 1080 1920 60Fps(1).mp4';
 }
 else if(code >= 51 && code <= 67){
     weatherVideo.src = 'weathervedios/149928-797491628.mp4';
 }
 else if(code >= 71 && code <= 77){
-    weatherVideo.src = 'weathervedios/6620907-hd_1080_1920_24fps.mp4';
+    weatherVideo.src = 'weathervedios/6620907-Hd 1080 1920 24Fps.mp4';
 }
 else if(code >= 80 && code <= 82){
-    weatherVideo.src = 'weathervedios/14175663_2160_3840_25fps.mp4';
+    weatherVideo.src = 'weathervedios/14175663 2160 3840 25Fps(1).mp4';
 }
 else if(code >= 95){
-    weatherVideo.src = 'weathervedios/13629036_1080_1920_59fps.mp4';
+    weatherVideo.src = 'weathervedios/13629036 1080 1920 59Fps.mp4';
 }
 
 
