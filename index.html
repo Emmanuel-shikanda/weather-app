@@ -32,7 +32,7 @@ class="vedio-back"
        <div class="search-box-content">
 
       <div class="search-box">
-        <input type="text"  id="City">
+        <input type="text"  id="City" placeholder="Enter city name">
         <select aria-label="Temperature unit">
           <option>°C</option>
           <option>°F</option>
@@ -55,7 +55,89 @@ class="vedio-back"
     </aside>
 
     <!-- ========== RIGHT SIDE: highlights and weekly forecast ========== -->
-    <main class="content">
+    <main class="content ">
+
+      <div class="weather-intro open">
+        <div class="intro-content">
+       <h1>Welcome to Your Weather Companion </h1>
+       <img src="icons/Weather Icon - 480x480.png" alt="iconic">
+         </div>
+      
+         <div class="weather-content-more">
+
+        <p>Stay informed about the weather wherever you are. Our weather application gives you a simple and convenient way to check current weather conditions and see what the next seven days may look like. </p>
+         
+      <h3>Simply enter the name of a city and discover useful weather information including:</h3>
+            
+
+        <ul>
+            <li><img src="icons/icons8-temperature-100.png" alt="temp"> Current temperature</li>
+            <li><img src="icons/Weather Icon - 480x480.png" alt="">Current weather conditions</li>
+            <li><img src="icons/icons8-humidity-100.png" alt=""> Humidity levels</li>
+            <li><img src="icons/icons8-speed-100.png" alt=""> Wind speed</li>
+            <li><img src="icons/icons8-vision-100.png" alt=""> Visibility</li>
+            <li><img src="icons/icons8-cloud-100.png" alt=""> Cloud coverage</li>
+            <li><img src="icons/icons8-sunrise.gif" alt="">Sunrise and sunset times</li>
+            <li><img src="icons/icons8-calendar.gif" alt="">7-day weather forecast</li>
+        </ul>
+
+            <p>
+            Whether you're planning your day, preparing for a trip,
+            going to school, heading to work, or simply curious about
+            the weather, you can quickly find the information you need.
+        </p>
+
+
+         </div>
+
+
+      </div>
+
+
+
+<section class="error-section close">
+
+    <div class="error-image">
+
+        <img src="icons/icons8-error-100.png" alt="Error">
+
+        <h1>Oops! Something went wrong</h1>
+    </div>
+
+    <div class="error-content">
+
+        <h2>We couldn't find that location.</h2>
+
+        <p>
+            We couldn't find weather information for the location
+            you entered. Please check the spelling of the city name
+            and try searching again.
+        </p>
+
+        <p>
+            Make sure you enter a valid city name. If the problem
+            continues, try searching for the location again.
+        </p>
+
+        <h3>Please try the following:</h3>
+
+        <ul class="error-list">
+            <li>✓ Check the spelling of the city name</li>
+            <li>✓ Make sure the city name is correct</li>
+            <li>✓ Try entering the city name again</li>
+            <li>✓ Check your internet connection</li>
+        </ul>
+
+
+    </div>
+
+
+</section>
+      
+
+<div class="weather-content close">
+    
+
 
       <h2 id="today"></h2>
 
@@ -122,56 +204,56 @@ class="vedio-back"
 
 
         <div class="card-day">
-          <h3>Sunday, April 7</h3>
-          <div class="icon">🌦️</div>
-          <p class="day-desc">light rain</p>
-          <p class="day-temp">16 °C &nbsp; 10 °C</p>
+          <h3 class='day-name'></h3>
+        <div class="iconic"></div>
+          <p class="day-desc"></p>
+          <p class="day-temp"> &nbsp; </p>
         </div>
 
         <div class="card-day">
-          <h3>Monday, April 8</h3>
-          <div class="icon">🌦️</div>
-          <p class="day-desc">light rain</p>
-          <p class="day-temp">16 °C &nbsp; 10 °C</p>
+          <h3 class='day-name'></h3>
+          <div class="iconic"></div>
+          <p class="day-desc"></p>
+          <p class="day-temp">&nbsp; </p>
         </div>
 
         <div class="card-day">
-          <h3>Tuesday, April 9</h3>
-          <div class="icon">🌦️</div>
-          <p class="day-desc">light rain</p>
-          <p class="day-temp">11 °C &nbsp; 6 °C</p>
+          <h3 class='day-name'></h3>
+          <div class="iconic"></div>
+          <p class="day-desc"></p>
+          <p class="day-temp"> &nbsp; </p>
         </div>
 
         <div class="card-day">
-          <h3>Wednesday, April 10</h3>
-          <div class="icon">🌦️</div>
-          <p class="day-desc">light rain</p>
-          <p class="day-temp">12 °C &nbsp; 7 °C</p>
+          <h3 class='day-name'></h3>
+          <div class="iconic"></div>
+          <p class="day-desc"></p>
+          <p class="day-temp"> &nbsp;</p>
         </div>
 
         <div class="card-day">
-          <h3>Thursday, April 11</h3>
-          <div class="icon">☁️</div>
-          <p class="day-desc">broken clouds</p>
-          <p class="day-temp">13 °C &nbsp; 7 °C</p>
+          <h3 class='day-name'></h3>
+          <div class="iconic"></div>
+          <p class="day-desc"></p>
+          <p class="day-temp"> &nbsp; </p>
         </div>
 
         <div class="card-day">
-          <h3>Friday, April 12</h3>
-          <div class="icon">☀️</div>
-          <p class="day-desc">clear sky</p>
-          <p class="day-temp">15 °C &nbsp; 8 °C</p>
+          <h3 class='day-name'></h3>
+          <div class="iconic"></div>
+          <p class="day-desc"></p>
+          <p class="day-temp"> &nbsp; </p>
         </div>
 
         <div class="card-day">
-          <h3>Saturday, April 13</h3>
-          <div class="icon">⛅</div>
-          <p class="day-desc">few clouds</p>
-          <p class="day-temp">14 °C &nbsp; 8 °C</p>
+          <h3 class='day-name'></h3>
+          <div class="iconic"></div>
+          <p class="day-desc"></p>
+          <p class="day-temp"> &nbsp; </p>
         </div>
 
       </div>
-
+</div>
     </main>
 
   </div>

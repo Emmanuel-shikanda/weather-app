@@ -33,6 +33,98 @@ body {
   overflow: hidden;           /* keeps the rounded corners clean */
 }
 
+.close{
+display:none;
+}
+
+.open{
+  display:block;
+}
+
+
+.intro-content{
+  display: inline-flex;
+  align-items: center;
+  padding: 20px;
+  font-size:0.8rem;
+}
+
+.intro-content img{
+  width:100%;
+ max-width:70px;
+}
+
+.weather-content-more{
+  padding:20px;
+  text-align: start;
+  border-radius:20px;
+  border:2px solid black;
+}
+
+.weather-content-more p{
+  color:black;
+  margin-bottom:20px;
+}
+
+.weather-content-more h3{
+  color:black;
+  font-size:1rem;
+}
+
+ul{
+  display: block;
+  gap:10px;
+  background-color: #00000016;
+  border-radius:20px;
+  padding:20px;
+  margin:10px;
+}
+li{
+  display: flex;
+  align-items: center;
+  margin:20px;
+}
+
+li img{
+  width:40px;
+  margin:10px;
+}
+
+.error-section.unseen{
+  display:none;
+}
+
+.error-section.seen{
+  display:block;
+}
+.error-image{
+  display: flex;
+  gap:15px;
+  align-items: center;
+  margin-bottom:30px;
+}
+
+.error-image img{
+  width:40px;
+}
+
+.error-image h1{
+  font-size:1.5rem;
+  color:red;
+}
+
+.error-content{
+  background-color:rgba(255, 0, 0, 0.084);
+  padding:20px;
+  border-radius:20px;
+}
+
+.error-list{
+  background-color: rgba(255, 0, 0, 0.454);
+}
+
+
+
 /* ---------- 4. Sidebar (left) ---------- */
 .sidebar {
   width: 350px;
@@ -141,6 +233,14 @@ z-index:0;
   padding: 30px;
 }
 
+
+.weather-content.close{
+  display: none;
+}
+.weather-content.open{
+  display: block;
+}
+
 .content h2 {
   font-size: 22px;
   font-weight: 600;
@@ -205,6 +305,8 @@ z-index:0;
 }
 
 /* ---------- 7. Highlights grid: 3 columns ---------- */
+
+
 .highlights {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
@@ -230,7 +332,6 @@ z-index:0;
   color: var(--text-on-main);
   border-radius: 10px;
   width:100%;
- max-width:230px;
   padding: 10px;
   text-align: center;
   position: relative;
@@ -244,9 +345,14 @@ z-index:0;
   gap: 5px;
 }
 
-.day .icon {
-  font-size: 45px;
+
+.card-day .iconic{
   margin: 10px 0;
+  font-size:3rem;
+}
+
+.card-day .day-name{
+  font-size:0.9rem;
 }
 
 .day-desc {

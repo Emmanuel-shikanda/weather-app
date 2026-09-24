@@ -48,7 +48,10 @@ let cityname = document.getElementById('City').value;
 
     async function weatherurl(){
 
-     let weather = await 'https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+long+'&hourly=temperature_2m&utm_source=chatgpt.com'+ '&hourly=temperature_2m,weather_code,relative_humidity_2m,wind_speed_10m,cloud_cover,visibility,pressure_msl&timezone=auto&daily=sunrise,sunset&forecast_days=7';
+     let weather = await`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}` +
+  `&hourly=temperature_2m,weather_code,relative_humidity_2m,wind_speed_10m,cloud_cover,visibility,pressure_msl` +
+  `&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum,wind_speed_10m_max` +
+  `&timezone=auto&forecast_days=7`; 
 
      let asking = await fetch(weather);
 
@@ -215,56 +218,104 @@ let visibility = document.getElementsByClassName('value visibility')[0];
 visibility.textContent = data.hourly.visibility[0] + ' m';
 
 //pressure
-let pressure = document.getElementsByClassName(' value pressure')[0];
+let pressure = document.getElementsByClassName('value pressure')[0];
 
 pressure.textContent = data.hourly.pressure_msl[0] + ' hPa';
+
+
+// weekly prediction
+
+let cards = document.getElementsByClassName('card-day');
+
+for(let i=0; i < 7; i++){
+
+    //date-prediction
+
+let date2 = new Date(data.daily.time[i]+'T12:00:00');
+
+let dayName = date2.toLocaleDateString('en-US',
+   {
+  day:'numeric',
+    weekday:'long',
+    month:'long',
+    
+
+   });
+
+cards[i].getElementsByClassName('day-name')[0].textContent = dayName;
+
+//weather-change-prediction
+
+let codePrediction = data.daily.weather_code[i];
+
+let predictioDesc='';
+let iconprediction='';
+
+
+    if(codePrediction === 0){
+        predictioDesc = 'Clear sky';
+        iconprediction= '☀️';
+    }
+    else if(codePrediction >= 1 && codePrediction <= 3){
+        predictioDesc= 'Cloudy';
+        iconprediction = '☁️';
+    }
+    else if(codePrediction === 45 || codePrediction === 48){
+        predictioDesc = 'Foggy';
+        iconprediction= '🌫️';
+    }
+    else if(codePrediction >= 51 && codePrediction <= 57){
+        predictioDesc = 'Drizzle';
+        iconprediction = '🌦️'
+    }
+    else if(codePrediction >= 61 && codePrediction <= 67){
+        predictioDesc = 'Rainy';
+        iconprediction = '🌧️';
+    }
+    else if(codePrediction >= 71 && codePrediction <= 77){
+        predictioDesc = 'Snowy';
+        iconprediction = '❄️';
+    }
+    else if(codePrediction >= 80 && codePrediction <= 82){
+        predictioDesc = 'Rain showers';
+        iconprediction = '🌦️';
+    }
+    else if(codePrediction >= 95){
+        predictioDesc= 'Thunderstorm';
+        iconprediction = '⛈️';
+    }
+
+cards[i].getElementsByClassName('iconic')[0].textContent = iconprediction;
+cards[i].getElementsByClassName('day-desc')[0].textContent = predictioDesc;
+
+//temperature-prediction
+
+ cards[i].getElementsByClassName('day-temp')[0].textContent =
+        data.daily.temperature_2m_max[i] + ' °C  - ' +
+        data.daily.temperature_2m_min[i] + ' °C ';
+
+}
+
+let weatherintro=document.getElementsByClassName('weather-intro')[0];
+
+weatherintro.classList.remove('open')
+weatherintro.classList.add('close');
+
+
+
+let weathercon = document.getElementsByClassName('weather-content')[0];
+
+
+weathercon.classList.remove('close')
+weathercon.classList.add('open');
+
+
 
 
 })
 
 
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
