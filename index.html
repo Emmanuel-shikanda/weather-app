@@ -33,10 +33,7 @@ class="vedio-back"
 
       <div class="search-box">
         <input type="text"  id="City" placeholder="Enter city name">
-        <select aria-label="Temperature unit">
-          <option>°C</option>
-          <option>°F</option>
-        </select>
+       
         <button id="Search"><img src="icons/icons8-search-100.png" alt=""></button>
       </div>
 
@@ -44,7 +41,7 @@ class="vedio-back"
    
 
       <!-- Temperature and details -->
-      <div class="current-info">
+      <div class="current-info open">
         <p class="temperature"></p>
         <p class="1small-text"></p>
         <p class="small-text description"></p>
@@ -73,12 +70,12 @@ class="vedio-back"
         <ul>
             <li><img src="icons/icons8-temperature-100.png" alt="temp"> Current temperature</li>
             <li><img src="icons/Weather Icon - 480x480.png" alt="">Current weather conditions</li>
-            <li><img src="icons/icons8-humidity-100.png" alt=""> Humidity levels</li>
+            <li><img src="icons/icons8-humidity-100 (1).png" alt=""> Humidity levels</li>
             <li><img src="icons/icons8-speed-100.png" alt=""> Wind speed</li>
             <li><img src="icons/icons8-vision-100.png" alt=""> Visibility</li>
             <li><img src="icons/icons8-cloud-100.png" alt=""> Cloud coverage</li>
-            <li><img src="icons/icons8-sunrise.gif" alt="">Sunrise and sunset times</li>
-            <li><img src="icons/icons8-calendar.gif" alt="">7-day weather forecast</li>
+            <li><img src="icons/icons8-sunrise-100 (1).png" alt="">Sunrise and sunset times</li>
+            <li><img src="icons/icons8-calendar-100.png" alt="">7-day weather forecast</li>
         </ul>
 
             <p>
@@ -106,7 +103,7 @@ class="vedio-back"
 
     <div class="error-content">
 
-        <h2>We couldn't find that location.</h2>
+        <h2 class="error-location"></h2>
 
         <p>
             We couldn't find weather information for the location
@@ -126,6 +123,7 @@ class="vedio-back"
             <li>✓ Make sure the city name is correct</li>
             <li>✓ Try entering the city name again</li>
             <li>✓ Check your internet connection</li>
+            <li>✓ Maybe we dont have the requested city</li>
         </ul>
 
 
@@ -144,52 +142,54 @@ class="vedio-back"
       <div class="highlights">
 
         <div class="card">
-          <img src="images/pexels-glass-1868045.jpg" alt="humidity" class="back-photo">
           <div class="card-content">
+            <img src="icons/icons8-humidity-100 (2).png" alt="">
           <h3>Humidity</h3>
           <p class="value humidity"></p>
           </div>
         </div>
 
            <div class="card">
-          <img src="images/elg21-wind-mills-6928590.jpg" alt="humidity" class="back-photo">
           <div class="card-content">
+            <img src="icons/icons8-wind-100.png" alt="">
           <h3>wind-speed</h3>
           <p class="value wind"></p>
           </div>
         </div>
 
           <div class="card">
-          <img src="images/elg21-lake-7377942.jpg" alt="humidity" class="back-photo">
           <div class="card-content">
+            <img src="icons/icons8-sunrise-100.png" alt="">
+            <div class="sun-row-container">
          <div class="sun-row">
             <p><br>Sunrise</p>
           </div>
           <div class="sun-row">
             <p><br>Sunset</p>
           </div>
+          </div>
         </div>
          </div>
         
   <div class="card">
-          <img src="images/wolfblur-clouds-1439324.jpg" alt="humidity" class="back-photo">
           <div class="card-content">
+            <img src="icons/icons8-clouds-100.png" alt="">
           <h3>clouds</h3>
           <p class="value clouds"></p>
           </div>
         </div>
     
   <div class="card">
-          <img src="images/mabelamber-sunglasses-1579389.jpg" alt="humidity" class="back-photo">
           <div class="card-content">
+            <img src="icons/icons8-visibility-100.png" alt="">
           <h3>visibility</h3>
           <p class="value visibility"></p>
           </div>
         </div>
         
   <div class="card">
-          <img src="images/laukritz-pressure-gauge-6715671.jpg" alt="humidity" class="back-photo">
           <div class="card-content">
+            <img src="icons/icons8-pressure-100.png" alt="">
           <h3>pressure</h3>
           <p class="value pressure"></p>
           </div>

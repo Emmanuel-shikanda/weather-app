@@ -1,5 +1,13 @@
 let searchBtn = document.getElementById('Search');
 
+let weatherintro=document.getElementsByClassName('weather-intro')[0];
+
+let weathercon = document.getElementsByClassName('weather-content')[0];
+
+let errorSection = document.getElementsByClassName('error-section')[0]
+
+let currentInfo = document.getElementsByClassName('current-info')[0];
+
 
 searchBtn.addEventListener('click',function(){
 
@@ -20,6 +28,7 @@ let cityname = document.getElementById('City').value;
     
     let request =await fetch(geourl);
 
+
     let data= await request.json();
 
     console.log(data);
@@ -29,7 +38,36 @@ let cityname = document.getElementById('City').value;
     }
 
     geodata().then(function(data){
-     
+
+    if(!data.results || data.results.length === 0){
+        weatherintro.classList.remove('open');
+        weatherintro.classList.add('close');
+        weathercon.classList.remove('open');
+        weathercon.classList.add('close');
+
+    
+    currentInfo.classList.remove('open');
+    currentInfo.classList.add('close');
+
+    errorSection.classList.remove('close');
+    errorSection.classList.add('open');
+    
+    let errorLocation = document.getElementsByClassName('error-location')[0];
+    errorLocation.textContent='We could not find,  '+cityname;
+
+         // stop here, don't touch data.results[0]
+    }else{
+    errorSection.classList.remove('open');
+    errorSection.classList.add('close');
+
+    weathercon.classList.remove('close');
+    weathercon.classList.add('open');
+
+      currentInfo.classList.remove('close');
+    currentInfo.classList.add('open');
+    
+}
+
         let long = data.results[0].longitude;
 
         let lat = data.results[0].latitude;
@@ -296,20 +334,15 @@ cards[i].getElementsByClassName('day-desc')[0].textContent = predictioDesc;
 
 }
 
-let weatherintro=document.getElementsByClassName('weather-intro')[0];
+//removing-intro
 
 weatherintro.classList.remove('open')
 weatherintro.classList.add('close');
 
-
-
-let weathercon = document.getElementsByClassName('weather-content')[0];
-
+//adding-content
 
 weathercon.classList.remove('close')
 weathercon.classList.add('open');
-
-
 
 
 })
